@@ -1,0 +1,4 @@
+requests
+argparse
+bs4
+selenium
