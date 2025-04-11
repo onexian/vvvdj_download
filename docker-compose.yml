@@ -1,0 +1,18 @@
+services:
+  dj_py:
+    image: python:3.12.5-alpine3.19
+    container_name: dj_py
+    volumes:
+      - ./:/data/web/:rw
+    tty: true
+    restart: always
+    environment:
+      TZ: "$TZ"
+    networks:
+      - default
+
+networks:
+  default:
+    driver: bridge
+    ipam:
+      driver: default
